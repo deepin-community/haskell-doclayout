@@ -1,0 +1,17 @@
+haskell-doclayout (0.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Tue, 18 Aug 2020 08:27:12 +0300
+
+haskell-doclayout (0.2.0.1-2) unstable; urgency=medium
+
+  * Build testsuite without SMP support.
+
+ -- Clint Adams <clint@debian.org>  Mon, 13 Jul 2020 08:04:03 -0400
+
+haskell-doclayout (0.2.0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Wed, 17 Jun 2020 08:15:14 +0300
