@@ -1,5 +1,35 @@
 # doclayout
 
+## 0.3.1.1
+
+  * Fix the end of the block of zero width characters which contains
+    the zero-width joiners and directional markings (Stephen Morgan, #5).
+    This fixes a regression introduced in 0.3.1, affecting code
+    points 0x2010 to 0x2030.
+
+## 0.3.1
+
+  * Improved handling of emojis.  Emojis are double-wide, but
+    previously this library did not treat them as such.  We now
+    have comprehensive support of emojis, including variation
+    modifiers and zero-width joiners, verified by a test suite.
+    Performance has been confirmed to be no worse for text without emojis.
+    (Stephen Morgan, #1).  API changes: export `realLengthNoShortcut`,
+    `isEmojiModifier`, `isEmojiVariation`, `isEmojiJoiner`.
+
+## 0.3.0.2
+
+ * NOINLINE `literal` instead of `fromString` (#2, sjakobi).
+   This produces a further reduction in allocations and
+   pandoc compile time.
+
+## 0.3.0.1
+
+ * NOINLINE `fromString` (#1).
+   @sjakobi reports that this change reduced total allocations
+   for building pandoc-2.12 with GHC 8.10.4 by 8.5% and reduced
+   peak allocations are reduced from 3854MB to 3389MB.
+
 ## 0.3
 
   * Add foldlChar to signature of HasChars [API change].
